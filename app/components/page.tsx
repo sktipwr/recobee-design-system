@@ -32,8 +32,22 @@ import AddIcon from "@mui/icons-material/Add";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CloseIcon from "@mui/icons-material/Close";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import ComponentShowcase from "@/components/ComponentShowcase";
 import EmptyState from "@/components/ui/EmptyState";
+import ScoreRing from "@/components/ui/ScoreRing";
+import ScoreBar from "@/components/ui/ScoreBar";
+import StatCard from "@/components/ui/StatCard";
+import ServiceCard from "@/components/ui/ServiceCard";
+import StatusBadge from "@/components/ui/StatusBadge";
+import FunnelBar from "@/components/ui/FunnelBar";
+import { ChartContainer, RBBarChart, RBLineChart, RBDoughnutChart, RBRadarChart, seriesPalette, seriesPaletteDim } from "@/components/ui/ChartWrapper";
 
 export default function ComponentsPage() {
   const [tab, setTab] = useState(0);
@@ -338,6 +352,207 @@ export default function ComponentsPage() {
           <EmptyState
             action={<Button variant="contained" size="small">Clear filters</Button>}
           />
+        </div>
+      </ComponentShowcase>
+      {/* ─── Stat Card ─── */}
+      <ComponentShowcase name="Stat Card" description="Metric display cards with color-coded values. From Ads Analysis dashboards.">
+        <div className="grid grid-cols-4 gap-4 w-full">
+          <StatCard label="Creative Quality" value="8.5" variant="accent" />
+          <StatCard label="Compliance" value="9.2" variant="success" subtitle="All checks passed" />
+          <StatCard label="Risk Score" value="3.1" variant="danger" subtitle="High risk detected" />
+          <StatCard label="Viral Potential" value="7.8" variant="info" />
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Service Card ─── */}
+      <ComponentShowcase name="Service Card" description="Feature/service cards from the RecoBee home page. Supports badges and disabled states.">
+        <div className="grid grid-cols-3 gap-4 w-full">
+          <ServiceCard
+            title="Script Analysis"
+            description="Unlock deep story insights: character arcs, dialogue scores, genre signals, and more."
+            icon={<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>}
+          />
+          <ServiceCard
+            title="Reel Analysis"
+            description="Measure Micro-Content performance with sentiment and engagement signals."
+            badge="Private Beta"
+            badgeVariant="amber"
+            icon={<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg>}
+          />
+          <ServiceCard
+            title="Audio Analysis"
+            description="Analyze audio-only content for sentiment, listener cues, and performance signals."
+            badge="Launching Soon"
+            badgeVariant="zinc"
+            disabled
+          />
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Score Ring ─── */}
+      <ComponentShowcase name="Score Ring" description="Circular progress indicator from Ads Analysis. Auto-colors green/amber/red based on score.">
+        <div className="flex items-end gap-8">
+          <ScoreRing score={8.5} label="Overall" size="lg" />
+          <ScoreRing score={6.2} label="Engagement" size="md" />
+          <ScoreRing score={3.1} label="Risk" size="md" />
+          <ScoreRing score={9.0} label="Quality" size="sm" />
+          <ScoreRing score={4.8} label="Reach" size="sm" />
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Score Bar ─── */}
+      <ComponentShowcase name="Score Bar" description="Horizontal progress bars for metric breakdowns. Auto-colors by value.">
+        <div className="space-y-2.5 w-full">
+          <ScoreBar label="Creative Quality" value={8.5} />
+          <ScoreBar label="Technical Score" value={7.2} />
+          <ScoreBar label="Cultural Alignment" value={5.8} />
+          <ScoreBar label="Compliance" value={9.1} />
+          <ScoreBar label="Risk Factor" value={3.2} />
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Status Badge ─── */}
+      <ComponentShowcase name="Status Badge" description="Status indicators for tables and lists. From Script Analysis table.">
+        <div className="space-y-3 w-full">
+          <div className="flex flex-wrap gap-2">
+            <StatusBadge label="Success" variant="success" />
+            <StatusBadge label="Warning" variant="warning" />
+            <StatusBadge label="Error" variant="error" />
+            <StatusBadge label="Info" variant="info" />
+            <StatusBadge label="Neutral" variant="neutral" />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <StatusBadge label="Pass" variant="success" dot />
+            <StatusBadge label="Review" variant="warning" dot />
+            <StatusBadge label="Failed" variant="error" dot />
+            <StatusBadge label="Pending" variant="info" dot />
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <StatusBadge label="Small" variant="success" size="sm" />
+            <StatusBadge label="Medium" variant="success" size="md" />
+          </div>
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Funnel Bar ─── */}
+      <ComponentShowcase name="Funnel" description="Conversion funnel visualization from Ads Analysis. Amber gradient with decreasing opacity.">
+        <div className="w-full max-w-lg">
+          <FunnelBar stages={[
+            { label: "Awareness", value: 92 },
+            { label: "Consideration", value: 68 },
+            { label: "Intent", value: 41 },
+            { label: "Action", value: 23 },
+          ]} />
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Charts ─── */}
+      <ComponentShowcase name="Charts" description="Chart.js with RecoBee dark theme. Bar, Line, Doughnut, and Radar variants.">
+        <div className="grid grid-cols-2 gap-4 w-full">
+          <ChartContainer title="Performance Breakdown" height={220}>
+            <RBBarChart data={{
+              labels: ["Creative", "Technical", "Cultural", "Compliance", "Platform", "Viral", "Conversion", "ROAS"],
+              datasets: [{
+                label: "Score",
+                data: [8.5, 7.2, 6.8, 9.1, 7.5, 7.8, 6.2, 8.0],
+                backgroundColor: seriesPaletteDim[0],
+                borderColor: seriesPalette[0],
+                borderWidth: 1,
+                borderRadius: 4,
+              }],
+            }} />
+          </ChartContainer>
+
+          <ChartContainer title="Virality Factors" height={220}>
+            <RBLineChart data={{
+              labels: ["Emotion", "Shareability", "Trend", "Hook", "Relatability", "Novelty", "CTA"],
+              datasets: [{
+                label: "Score",
+                data: [8.2, 7.5, 6.8, 9.0, 7.2, 8.5, 6.0],
+                borderColor: seriesPalette[0],
+                backgroundColor: seriesPaletteDim[0],
+                fill: true,
+                tension: 0.4,
+                pointRadius: 4,
+                pointBackgroundColor: seriesPalette[0],
+              }],
+            }} />
+          </ChartContainer>
+
+          <ChartContainer title="Media Mix" height={220}>
+            <RBDoughnutChart data={{
+              labels: ["TV", "YouTube", "Facebook", "Instagram", "OTT", "TikTok"],
+              datasets: [{
+                data: [30, 25, 15, 12, 10, 8],
+                backgroundColor: seriesPalette.slice(0, 6),
+                borderColor: "transparent",
+                borderWidth: 0,
+              }],
+            }} />
+          </ChartContainer>
+
+          <ChartContainer title="Competitive Position" height={220}>
+            <RBRadarChart data={{
+              labels: ["Creativity", "Production", "Engagement", "Virality", "ROI", "Brand Fit"],
+              datasets: [
+                {
+                  label: "Your Ad",
+                  data: [8, 7, 9, 7, 8, 6],
+                  borderColor: seriesPalette[0],
+                  backgroundColor: seriesPaletteDim[0],
+                  pointBackgroundColor: seriesPalette[0],
+                },
+                {
+                  label: "Competitor",
+                  data: [6, 8, 6, 5, 7, 8],
+                  borderColor: seriesPalette[1],
+                  backgroundColor: seriesPaletteDim[1],
+                  pointBackgroundColor: seriesPalette[1],
+                },
+              ],
+            }} />
+          </ChartContainer>
+        </div>
+      </ComponentShowcase>
+
+      {/* ─── Data Table ─── */}
+      <ComponentShowcase name="Table" description="MUI Table styled for RecoBee. From Script Analysis listing page.">
+        <div className="w-full">
+          <TableContainer component={Paper} elevation={0}>
+            <Table size="small">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Script Title</TableCell>
+                  <TableCell align="center">Overall Rating</TableCell>
+                  <TableCell>Genre</TableCell>
+                  <TableCell align="center">Act 1</TableCell>
+                  <TableCell align="center">Act 2</TableCell>
+                  <TableCell align="center">Act 3</TableCell>
+                  <TableCell align="center">Status</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {[
+                  { title: "mukhi", rating: 4.2, genre: "Psychological Horror", a1: 4.3, a2: 4.0, a3: 4.3, status: "success" as const },
+                  { title: "Dangal", rating: 8.6, genre: "Sports Drama", a1: 8.5, a2: 8.0, a3: 9.3, status: "success" as const },
+                  { title: "BKPitch", rating: 4.8, genre: "Dark Comedy Thriller", a1: 5.8, a2: 5.0, a3: 3.7, status: "warning" as const },
+                  { title: "A Separation", rating: 9.0, genre: "Social Drama", a1: 9.3, a2: 8.7, a3: 9.0, status: "success" as const },
+                ].map((row) => (
+                  <TableRow key={row.title}>
+                    <TableCell><span className="text-amber-400 font-medium">{row.title}</span></TableCell>
+                    <TableCell align="center">{row.rating}</TableCell>
+                    <TableCell>{row.genre}</TableCell>
+                    <TableCell align="center">{row.a1}</TableCell>
+                    <TableCell align="center">{row.a2}</TableCell>
+                    <TableCell align="center">{row.a3}</TableCell>
+                    <TableCell align="center">
+                      <StatusBadge label={row.status === "success" ? "Success" : "Review"} variant={row.status} size="sm" />
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </div>
       </ComponentShowcase>
     </main>

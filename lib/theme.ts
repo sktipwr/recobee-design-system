@@ -410,6 +410,55 @@ const recobeeTheme = createTheme({
       },
     },
 
+    // ─── Table ───
+    MuiTableContainer: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "transparent",
+          borderRadius: 16,
+          border: `1px solid ${alpha("#ffffff", 0.06)}`,
+        },
+      },
+    },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          backgroundColor: alpha(zinc[900], 0.6),
+          "& .MuiTableCell-head": {
+            color: zinc[400],
+            fontSize: "11px",
+            fontWeight: 600,
+            textTransform: "uppercase" as const,
+            letterSpacing: "0.05em",
+            borderBottom: `1px solid ${alpha("#ffffff", 0.06)}`,
+            padding: "12px 16px",
+          },
+        },
+      },
+    },
+    MuiTableBody: {
+      styleOverrides: {
+        root: {
+          "& .MuiTableRow-root": {
+            transition: "background-color 200ms",
+            "&:hover": { backgroundColor: alpha("#ffffff", 0.02) },
+          },
+          "& .MuiTableCell-body": {
+            color: zinc[300],
+            fontSize: "13px",
+            borderBottom: `1px solid ${alpha("#ffffff", 0.04)}`,
+            padding: "10px 16px",
+          },
+        },
+      },
+    },
+    MuiTablePagination: {
+      styleOverrides: {
+        root: { color: zinc[400], fontSize: "13px" },
+        selectIcon: { color: zinc[500] },
+      },
+    },
+
     // ─── Skeleton (loading) ───
     MuiSkeleton: {
       styleOverrides: {
