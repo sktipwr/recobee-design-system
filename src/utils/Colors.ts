@@ -1,0 +1,95 @@
+export default class AppColors {
+   static TRANSPARENT = 'transparent'
+   static GREY = '#616161'
+   static WHITE = 'white'
+   static WHITE_VARIANT = '#F8F8F9'
+   static WHITE_VARIANT2 = '#F5F5F5'
+   static WHITE_VARIANT3 = '#EEEEEE'
+   static THEME_BG_COLOR = '#1E1E1E'
+
+   static BLACK = '#000'
+   static BLACK_OPACITY_80 = "#000000CC"
+   static BLACK_VARIANT = '#242424'
+   static BLACK_VARIANT2 = '#7F7F7F'
+   static BLACK_VARIANT3 = '#212121'
+   static BLACK_VARIANT4 = '#0E0E0E'
+   static BLACK_VARIANT5 = '#141414'
+   static BLACK_VARIANT6 =  '#211F26'
+   static BLACK_VARIANT7 = '#1F1F1F'
+   static GREY_VARIANT2 = '#121212'
+   static GREY_VARIANT1 = '#9E9E9E'
+   static GREY_VARIANT28 = '#333333'
+   static LIGHT_YELLOW = '#E9C638'
+   static LIGHT_YELLOW2 = '#FDE90F'
+   static LIGHT_YELLOW3 = '#FBEB41'
+   static LIGHT_YELLOW4 = '#FCD604'
+   static LIGHT_YELLOW_VARIANT = '#DEBF19'
+   static LIGHT_YELLOW_VARIANT2 = '#FEF494'
+   static LIGHT_YELLOW_VARIANT3 = '#FEEF68'
+   static LIGHT_YELLOW_VARIANT4 = '#F5D31C'
+   static LIGHT_YELLOW_VARIANT5 = '#f5dd4b'
+   static LIGHT_YELLOW_VARIANT10 = '#e9c46a'
+   static LIGHT_YELLOW_VARIANT6 = '#FFF8BF'
+   static LIGHT_YELLOW_VARIANT7 = '#F6CE3D'
+   static LIGHT_YELLOW_VARIANT8 = "#353014"
+   static LIGHT_YELLOW_VARIANT9 = "#292100"
+   static YELLOW_VARIANT1 = '#CDCD0C'
+   static GREY_VARIANT4 = '#BDBDBD'
+   static GREY_VARIANT3 = '#9E9E9E'
+
+   static GREY_VARIANT8 = '#272727'
+   static GREY_VARIANT9 = '#757575'
+   static GREY_VARIANT7 = '#D4D4D4'
+   static GREY_VARIANT5 = '#d4d4d466'
+   static GREY_VARIANT6 = '#424242'
+   static GREY_VARIANT10 = '#E0E0E0'
+   static GREY_VARIANT11 = '#757575'
+   static GREY_VARIANT12 = '#2E2E2E'
+   static GREY_VARIANT14 = '#eeeeee'
+   static GREY_VARIANT15 = '#D9D9D9'
+   static GREY_VARIANT16 = '#09121F'
+   static GREY_VARIANT17 = '#3e3e3e'
+   static GREY_VARIANT18 = 'rgba(117, 117, 117, 0.4)'
+   static GREY_VARIANT19 = '#2B2930'
+   static GREY_VARIANT20 = '#999'
+   static GREY_VARIANT21 = '#1A1A1A'
+   static GREY_VARIANT22 = "#696969"
+   static GREY_VARIANT23 = "#8A8A8A"
+   static GREY_VARIANT24 = "#CACACA"
+   static GREY_VARIANT25 = "#1D1D1D"
+   static GREY_VARIANT26 = "#2b2b2b"
+   static GREY_VARIANT27 = "#252525"
+   static WHITE_VARIANT4 = '#3a3a3a'
+   static TRANSPARENT_YELLOW = 'rgba(245, 211, 28, 0.15)'
+   static LIGHT_YELLOW_GRADIENT = '#F9FE11'
+   static MEDIUM_YELLOW_GRADIENT = '#FACC15'
+   static DARK_YELLOW_GRADIENT = '#FF9A3D'
+   static GREY_TRANSPARENT = 'rgba(14, 14, 14, 0.5)'
+   static GREY_TRANSPARENT2 = 'rgba(66, 66, 66, 0.2)'
+   static GREY_TRANSPARENT3 = 'rgba(66, 66, 66, 0.4)'
+
+   static ERROR_RED = '#E53935'
+   static RED_VARIANT = '#FC5555'
+   static GREEN = '#388E3C'
+   static GREEN_VARIANT1 = '#29CC6A'
+
+   // Rank badge colors
+   static GOLD_VARIANT = '#CCA106'
+   static GOLD_VARIANT2 = '#FED604'
+   static SILVER_VARIANT = '#8CA7BC'
+   static BRONZE_VARIANT = '#D18530'
+   static BRONZE_VARIANT2 = '#F8BE8E'
+   static BLUE_VARIANT = '#8EA5BC'
+   static BLUE_VARIANT2 = '#D9E3ED'
+
+   // Discover lists card colors
+   static PURPLE_VARIANT = '#8C66AC'
+   static TEAL_VARIANT = '#036450'
+   static LIME_VARIANT = '#5F8109'
+   static PINK_VARIANT = '#DB1588'
+   static PURPLE_VARIANT2 = '#8E66AC'
+   static ORANGE_VARIANT = '#F59A25'
+   static LIME_VARIANT2 = '#4D6905'
+   static TEAL_VARIANT2 = '#05856A'
+    static WHITE_OPACITY_60 = 'rgba(255,255,255,0.6)'
+}

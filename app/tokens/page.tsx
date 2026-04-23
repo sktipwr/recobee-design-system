@@ -26,7 +26,7 @@ function Swatch({ name, value, tw, preview }: { name: string; value: string; tw:
 
 export default function TokensPage() {
   return (
-    <main className="px-8 py-10 max-w-4xl space-y-12">
+    <main className="pl-[220px] px-10 py-8 max-w-5xl space-y-12">
       <div>
         <h1 className="text-heading-lg font-bold text-white">Tokens</h1>
         <p className="text-body text-zinc-400 mt-1">The foundational design decisions that define RecoBee&#39;s visual language.</p>

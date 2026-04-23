@@ -1,0 +1,37 @@
+// Re-export commonly used icons for stories
+// These are the REAL SVG icons from the RecoBee app
+export { default as ArrowIcon } from '../../src/icons/Arrow';
+export { default as SearchIcon } from '../../src/icons/Search';
+export { default as SettingsIcon } from '../../src/icons/Settings';
+export { default as CrossIcon } from '../../src/icons/Cross';
+export { default as AddIcon } from '../../src/icons/Add';
+export { default as AddCircleIcon } from '../../src/icons/AddCircle';
+export { default as BellIcon } from '../../src/icons/Bell';
+export { default as HomeIcon } from '../../src/icons/Home';
+export { default as ExploreIcon } from '../../src/icons/Explore';
+export { default as HeartIcon } from '../../src/icons/Heart';
+export { default as LikeIcon } from '../../src/icons/Like';
+export { default as LikeFilledIcon } from '../../src/icons/LikeFilled';
+export { default as DislikeIcon } from '../../src/icons/Dislike';
+export { default as StarFilledIcon } from '../../src/icons/StarFilled';
+export { default as ShareAndroidIcon } from '../../src/icons/ShareAndroid';
+export { default as ShareIOSIcon } from '../../src/icons/ShareIOS';
+export { default as MoreVerticalIcon } from '../../src/icons/MoreVertical';
+export { default as MenuIcon } from '../../src/icons/MenuIcon';
+export { default as FilterIcon } from '../../src/icons/Filter';
+export { default as EditIcon } from '../../src/icons/Edit';
+export { default as PencilIcon } from '../../src/icons/Pencil';
+export { default as TickIcon } from '../../src/icons/Tick';
+export { default as UserIcon } from '../../src/icons/User';
+export { default as PlayIcon } from '../../src/icons/PlayIcon';
+export { default as InboxIcon } from '../../src/icons/Inbox';
+export { default as MovieDiaryIcon } from '../../src/icons/MovieDiary';
+export { default as WatchlistIcon } from '../../src/icons/Watchlist';
+export { default as CameraIcon } from '../../src/icons/Camera';
+export { default as CalendarIcon } from '../../src/icons/Calendar';
+export { default as ClockIcon } from '../../src/icons/Clock';
+export { default as PinIcon } from '../../src/icons/Pin';
+export { default as ShortsIcon } from '../../src/icons/Shorts';
+export { default as SocialIcon } from '../../src/icons/Social';
+export { default as ReviewIcon } from '../../src/icons/Review';
+export { default as RightArrowIcon } from '../../src/icons/RightArrow';

@@ -1,0 +1,12 @@
+import React from 'react';
+import Svg, { Path, G } from 'react-native-svg';
+
+export default function Pencil(props) {
+  return (
+    <Svg width={props.width || "24"} height={props.height || "24"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <G {...props}>
+        <Path d="M3.06616 18.3151C3.07546 17.9381 3.08011 17.7497 3.12568 17.5726C3.16608 17.4156 3.23007 17.2658 3.31544 17.1282C3.41171 16.973 3.54444 16.8396 3.8099 16.573L16.8626 3.46297C17.3862 2.93708 18.204 2.84896 18.8267 3.25131C19.6037 3.75331 20.2713 4.42948 20.7594 5.21582C21.1632 5.86631 21.0315 6.68941 20.5014 7.22177L7.52811 20.2521C7.25274 20.5287 7.11505 20.6669 6.95435 20.7658C6.81188 20.8534 6.65654 20.9178 6.49406 20.9568C6.31079 21.0008 6.11608 21.0005 5.72665 20.9999L3 20.9955L3.06616 18.3151Z" stroke={props.color || "white"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </G>
+    </Svg>
+  );
+}
